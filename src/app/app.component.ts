@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Quote } from './quote-class/quote';
+import { QuoteRequestService } from './quote-http/quote-request.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  providers :[QuoteRequestService]
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -12,7 +14,7 @@ export class AppComponent {
   quote: Quote;
 
   constructor( private http: HttpClient) {
-    
+
   }
 
 
